@@ -1,5 +1,6 @@
 <?php
 /* ----------------------------------------------------------------------
+ * app/printTemplates/labels/avery_8000.php
  * ----------------------------------------------------------------------
  * CollectiveAccess
  * Open-source collections management software
@@ -25,32 +26,25 @@
  * -=-=-=-=-=- CUT HERE -=-=-=-=-=-
  * Template configuration:
  *
- * @name Avery 5160 Storage Location version 2
+ * @name Avery Geist
  * @type label
  * @pageSize letter
  * @pageOrientation portrait
- * @tables ca_storage_locations
- * @marginLeft 0.15in
- * @marginRight 0.15in
+ * @tables ca_objects
+ * @marginLeft 0.25in
+ * @marginRight 0.125in
  * @marginTop 0.5in
  * @marginBottom 0.5in
- * @horizontalGutter 0in
- * @verticalGutter 0.15625in
- * @labelWidth 2.65in
- * @labelHeight 1.0in
- * @current_sort_direction ASC
- *
+ * @horizontalGutter 0.3125in
+ * @verticalGutter 0.0in
+ * @labelWidth 7in
+ * @labelHeight 5in
+ * 
  * ----------------------------------------------------------------------
  */
  
  	$vo_result = $this->getVar('result');	
  ?>
- <div class="bodyText" style="position: absolute; left: 10px; top: 15px; ">
- 	
- 	{{{<ifdef code="ca_storage_locations.preferred_labels">^ca_storage_locations.idno</ifdef>}}}
-</div>
-
- <div class="barcode" style="position: absolute; left: 10px; top: 42px; width: 140px; ">
- 	{{{barcode:code128:7:^ca_storage_locations.idno}}}
-</div>
-
+ <div class="smallText" style="position: absolute; left: 0.1in; top: 0.1in; width: 5in; height: 4in; overflow: hidden; background-image:("/var/www/html/nine/themes/default/graphics/icons/Unlock.png"); ">
+ <?php print $vo_result->getWithTemplate('(^ca_objects.idno) ^ca_objects.preferred_labels.name'); ?>
+ </div>

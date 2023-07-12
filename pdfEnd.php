@@ -1,5 +1,6 @@
 <?php
 /* ----------------------------------------------------------------------
+ * app/templates/pdfEnd.php : bottom-matter appended to PDF templates
  * ----------------------------------------------------------------------
  * CollectiveAccess
  * Open-source collections management software
@@ -25,32 +26,11 @@
  * -=-=-=-=-=- CUT HERE -=-=-=-=-=-
  * Template configuration:
  *
- * @name Avery 5160 Storage Location version 2
- * @type label
- * @pageSize letter
- * @pageOrientation portrait
- * @tables ca_storage_locations
- * @marginLeft 0.15in
- * @marginRight 0.15in
- * @marginTop 0.5in
- * @marginBottom 0.5in
- * @horizontalGutter 0in
- * @verticalGutter 0.15625in
- * @labelWidth 2.65in
- * @labelHeight 1.0in
- * @current_sort_direction ASC
+ * @name PDF end
+ * @type pageEnd
  *
  * ----------------------------------------------------------------------
  */
- 
- 	$vo_result = $this->getVar('result');	
- ?>
- <div class="bodyText" style="position: absolute; left: 10px; top: 15px; ">
- 	
- 	{{{<ifdef code="ca_storage_locations.preferred_labels">^ca_storage_locations.idno</ifdef>}}}
-</div>
-
- <div class="barcode" style="position: absolute; left: 10px; top: 42px; width: 140px; ">
- 	{{{barcode:code128:7:^ca_storage_locations.idno}}}
-</div>
-
+?>
+	</body>
+</html>

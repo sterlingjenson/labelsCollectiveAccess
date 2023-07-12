@@ -25,19 +25,19 @@
  * -=-=-=-=-=- CUT HERE -=-=-=-=-=-
  * Template configuration:
  *
- * @name Avery 5160 Storage Location version 2
+ * @name register
  * @type label
  * @pageSize letter
  * @pageOrientation portrait
- * @tables ca_storage_locations
- * @marginLeft 0.15in
- * @marginRight 0.15in
+ * @tables ca_object_lots
+ * @marginLeft 0.5in
+ * @marginRight 0.5in
  * @marginTop 0.5in
  * @marginBottom 0.5in
  * @horizontalGutter 0in
  * @verticalGutter 0.15625in
- * @labelWidth 2.65in
- * @labelHeight 1.0in
+ * @labelWidth 10in
+ * @labelHeight 6in
  * @current_sort_direction ASC
  *
  * ----------------------------------------------------------------------
@@ -47,10 +47,12 @@
  ?>
  <div class="bodyText" style="position: absolute; left: 10px; top: 15px; ">
  	
- 	{{{<ifdef code="ca_storage_locations.preferred_labels">^ca_storage_locations.idno</ifdef>}}}
+ 	{{{<ifdef code="ca_object_lots.idno">^ca_object_lots.idno</ifdef>}}}
 </div>
 
  <div class="barcode" style="position: absolute; left: 10px; top: 42px; width: 140px; ">
- 	{{{barcode:code128:7:^ca_storage_locations.idno}}}
+ 	{{{barcode:code128:7:^ca_object_lots.idno}}}
 </div>
+
+ 
 

@@ -1,5 +1,6 @@
 <?php
 /* ----------------------------------------------------------------------
+ * app/printTemplates/labels/avery_8161.php
  * ----------------------------------------------------------------------
  * CollectiveAccess
  * Open-source collections management software
@@ -25,20 +26,20 @@
  * -=-=-=-=-=- CUT HERE -=-=-=-=-=-
  * Template configuration:
  *
- * @name Avery 5160 Storage Location version 2
+ * @name Archival Folders (Location)  - Avery 8161
  * @type label
  * @pageSize letter
  * @pageOrientation portrait
  * @tables ca_storage_locations
- * @marginLeft 0.15in
- * @marginRight 0.15in
+ * @marginLeft 0.125in
+ * @marginRight 0.125in
  * @marginTop 0.5in
  * @marginBottom 0.5in
  * @horizontalGutter 0in
- * @verticalGutter 0.15625in
- * @labelWidth 2.65in
- * @labelHeight 1.0in
- * @current_sort_direction ASC
+ * @verticalGutter 0.25in
+ * @labelWidth 8.166in
+ * @labelHeight 1in
+ * 
  *
  * ----------------------------------------------------------------------
  */
@@ -53,4 +54,7 @@
  <div class="barcode" style="position: absolute; left: 10px; top: 42px; width: 140px; ">
  	{{{barcode:code128:7:^ca_storage_locations.idno}}}
 </div>
+
+ 
+
 

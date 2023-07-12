@@ -1,5 +1,6 @@
 <?php
 /* ----------------------------------------------------------------------
+ * app/printTemplates/labels/avery_8161.php
  * ----------------------------------------------------------------------
  * CollectiveAccess
  * Open-source collections management software
@@ -25,32 +26,32 @@
  * -=-=-=-=-=- CUT HERE -=-=-=-=-=-
  * Template configuration:
  *
- * @name Avery 5160 Storage Location version 2
+ * @name Subject -- Avery 5160 Name
  * @type label
  * @pageSize letter
  * @pageOrientation portrait
- * @tables ca_storage_locations
- * @marginLeft 0.15in
- * @marginRight 0.15in
+ * @tables ca_objects
+ * @marginLeft 0.125in
+ * @marginRight 0.125in
  * @marginTop 0.5in
  * @marginBottom 0.5in
  * @horizontalGutter 0in
- * @verticalGutter 0.15625in
- * @labelWidth 2.65in
- * @labelHeight 1.0in
- * @current_sort_direction ASC
+ * @verticalGutter 0.25in
+ * @labelWidth 2.625in
+ * @labelHeight 1in
+ * 
  *
  * ----------------------------------------------------------------------
  */
  
  	$vo_result = $this->getVar('result');	
  ?>
- <div class="bodyText" style="position: absolute; left: 10px; top: 15px; ">
- 	
- 	{{{<ifdef code="ca_storage_locations.preferred_labels">^ca_storage_locations.idno</ifdef>}}}
-</div>
+ <div class="subject" style="overflow: hidden; text-align: center; ">
+ 	{{{^ca_entities.preferred_labels.surname}}}
+ </div>
 
- <div class="barcode" style="position: absolute; left: 10px; top: 42px; width: 140px; ">
- 	{{{barcode:code128:7:^ca_storage_locations.idno}}}
-</div>
+ <!--- div class="subject" style="overflow: hidden; text-align: center; " >
+ 	{{{^ca_objects.lcsh_terms}}}
+ </div --->
+
 

@@ -25,7 +25,7 @@
  * -=-=-=-=-=- CUT HERE -=-=-=-=-=-
  * Template configuration:
  *
- * @name Avery 5160 Storage Location version 2
+ * @name Avery 5160 Storage Location version 3
  * @type label
  * @pageSize letter
  * @pageOrientation portrait
@@ -45,12 +45,13 @@
  
  	$vo_result = $this->getVar('result');	
  ?>
- <div class="bodyText" style="position: absolute; left: 10px; top: 15px; ">
- 	
+ <div class="largerBodyText" style="position: absolute; left: 10px; top: 10px; ">
  	{{{<ifdef code="ca_storage_locations.preferred_labels">^ca_storage_locations.idno</ifdef>}}}
 </div>
 
  <div class="barcode" style="position: absolute; left: 10px; top: 42px; width: 140px; ">
  	{{{barcode:code128:7:^ca_storage_locations.idno}}}
 </div>
+
+ 
 
